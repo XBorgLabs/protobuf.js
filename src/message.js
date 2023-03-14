@@ -98,7 +98,7 @@ Message.decodeDelimited = function decodeDelimited(reader) {
  * Verifies a message of this type.
  * @name Message.verify
  * @function
- * @param {Object.<string,*>} message Plain object to verify
+ * @param {any} message Plain object to verify
  * @returns {string|null} `null` if valid, otherwise the reason why it is not
  */
 Message.verify = function verify(message) {
@@ -107,7 +107,7 @@ Message.verify = function verify(message) {
 
 /**
  * Creates a new message of this type from a plain object. Also converts values to their respective internal types.
- * @param {Object.<string,*>} object Plain object
+ * @param {any} object Plain object
  * @returns {T} Message instance
  * @template T extends Message<T>
  * @this Constructor<T>
@@ -120,7 +120,7 @@ Message.fromObject = function fromObject(object) {
  * Creates a plain object from a message of this type. Also converts values to other types if specified.
  * @param {T} message Message instance
  * @param {IConversionOptions} [options] Conversion options
- * @returns {Object.<string,*>} Plain object
+ * @returns {any} Plain object
  * @template T extends Message<T>
  * @this Constructor<T>
  */
