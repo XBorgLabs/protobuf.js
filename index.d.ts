@@ -567,14 +567,14 @@ export class Message<T extends object = object> {
      * @param message Plain object to verify
      * @returns `null` if valid, otherwise the reason why it is not
      */
-    public static verify(message: { [k: string]: any }): (string|null);
+    public static verify(message: any): (string|null);
 
     /**
      * Creates a new message of this type from a plain object. Also converts values to their respective internal types.
      * @param object Plain object
      * @returns Message instance
      */
-    public static fromObject<T extends Message<T>>(this: Constructor<T>, object: { [k: string]: any }): T;
+    public static fromObject<T extends Message<T>>(this: Constructor<T>, object: any): T;
 
     /**
      * Creates a plain object from a message of this type. Also converts values to other types if specified.
@@ -582,7 +582,7 @@ export class Message<T extends object = object> {
      * @param [options] Conversion options
      * @returns Plain object
      */
-    public static toObject<T extends Message<T>>(this: Constructor<T>, message: T, options?: IConversionOptions): { [k: string]: any };
+    public static toObject<T extends Message<T>>(this: Constructor<T>, message: T, options?: IConversionOptions): any;
 
     /**
      * Converts this message to JSON.
@@ -1660,14 +1660,14 @@ export class Type extends NamespaceBase {
      * @param message Plain object to verify
      * @returns `null` if valid, otherwise the reason why it is not
      */
-    public verify(message: { [k: string]: any }): (null|string);
+    public verify(message: any): (null|string);
 
     /**
      * Creates a new message of this type from a plain object. Also converts values to their respective internal types.
      * @param object Plain object to convert
      * @returns Message instance
      */
-    public fromObject(object: { [k: string]: any }): Message<{}>;
+    public fromObject(object: any): Message<{}>;
 
     /**
      * Creates a plain object from a message of this type. Also converts values to other types if specified.
@@ -1675,7 +1675,7 @@ export class Type extends NamespaceBase {
      * @param [options] Conversion options
      * @returns Plain object
      */
-    public toObject(message: Message<{}>, options?: IConversionOptions): { [k: string]: any };
+    public toObject(message: Message<{}>, options?: IConversionOptions): any;
 
     /**
      * Type decorator (TypeScript).

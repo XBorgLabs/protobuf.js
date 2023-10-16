@@ -522,7 +522,7 @@ Type.prototype.decodeDelimited = function decodeDelimited(reader) {
 
 /**
  * Verifies that field values are valid and that required fields are present.
- * @param {Object.<string,*>} message Plain object to verify
+ * @param {any} message Plain object to verify
  * @returns {null|string} `null` if valid, otherwise the reason why it is not
  */
 Type.prototype.verify = function verify_setup(message) {
@@ -531,7 +531,7 @@ Type.prototype.verify = function verify_setup(message) {
 
 /**
  * Creates a new message of this type from a plain object. Also converts values to their respective internal types.
- * @param {Object.<string,*>} object Plain object to convert
+ * @param {any} object Plain object to convert
  * @returns {Message<{}>} Message instance
  */
 Type.prototype.fromObject = function fromObject(object) {
@@ -561,7 +561,7 @@ Type.prototype.fromObject = function fromObject(object) {
  * Creates a plain object from a message of this type. Also converts values to other types if specified.
  * @param {Message<{}>} message Message instance
  * @param {IConversionOptions} [options] Conversion options
- * @returns {Object.<string,*>} Plain object
+ * @returns {any} Plain object
  */
 Type.prototype.toObject = function toObject(message, options) {
     return this.setup().toObject(message, options);
