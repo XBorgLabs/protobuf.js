@@ -1,5 +1,5 @@
 {
-  "name": "@xborg/protobufjs",
+  "name": "@xborglabs/protobufjs",
   "version": "7.2.5",
   "versionScheme": "~",
   "description": "Protocol Buffers for JavaScript (& TypeScript).",
